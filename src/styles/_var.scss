@@ -1,0 +1,48 @@
+$border-radius: 4px;
+
+$primary: #FF6362;
+
+$success: #67c23A;
+
+$warning: #E6A23C;
+
+$danger: #F56C6C;
+$info: #909399;
+
+$primary-hover: #FF8281;
+$success-hover: #85ce61;
+$warning-hover: #ebb563;
+$danger-hover: #f78989;
+$info-hover: #a6a9ad;
+$border-color: #dcdfe6;
+
+// 如果变量之前没有赋值，则使用默认值
+$--sm: 768px !default;
+$--md: 992px !default;
+$--lg: 1200px !default;
+$--xl: 1920px !default;
+$map: (
+  "xs": (max-width: $--sm - 1),
+  "sm": (min-width: $--sm),
+  "md": (min-width: $--md),
+  "lg": (min-width: $--lg),
+  "xl": (min-width: $--xl)
+);
+
+@mixin res($key) {
+  @media only screen and #{inspect(map-get($map, $key))} {
+    @content 
+  }  
+}
+
+$primary-active: #e65958;
+$success-active: #5daf34;
+$warning-active: #cf9236;
+$danger-active: #dd6161;
+$info-active: #82848a;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
