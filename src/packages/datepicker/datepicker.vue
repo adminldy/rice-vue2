@@ -187,6 +187,7 @@ export default {
       return year === years
     },
     isMonth(months) {
+      console.log(`isMonth`)
       let [year, month, day] = getYearMonthDay(new Date())
       return year === this.tempTime.year && month === months
     },
